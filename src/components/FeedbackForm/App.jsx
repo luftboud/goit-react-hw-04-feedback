@@ -12,17 +12,17 @@ const App = () => {
 
   const handleClick = evt => {
     const { name } = evt.target;
-    if (name == 'good') {
+    if (name === 'good') {
       const value = good
       const valueUpToDate = value + 1;
       setGood(valueUpToDate)
     } 
-    if (name == 'neutral') {
+    if (name === 'neutral') {
       const value = neutral
       const valueUpToDate = value + 1;
       setNeutral(valueUpToDate)
     } 
-    if (name == 'bad') {
+    if (name === 'bad') {
       const value = bad
       const valueUpToDate = value + 1;
       setBad(valueUpToDate)
