@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { FeedbackOptions } from './FeedbackOptions';
-import { Statistics } from './Statistics';
-import { Section } from './Section';
-import { Notification } from './Notification';
+import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
+import { Statistics } from '../Statistics/Statistics';
+import { Section } from '../Section/Section';
+import { Notification } from '../Notification/Notification';
 import css from './App.module.css'
 
 const App = () => {
@@ -47,10 +47,12 @@ const App = () => {
       neutral,
       bad
     );
+  const options = ["good", "neutral", "bad"]
     return (
       <div className = {css.app}>
         <Section title="Please leave your feedback">
           <FeedbackOptions
+            options={options}
             onLeaveFeedback={handleClick}
           />
         </Section>
